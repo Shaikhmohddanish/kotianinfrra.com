@@ -46,7 +46,7 @@ export default function AboutPage() {
                 helped thousands of families find their dream homes.
               </p>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                Under his leadership, Kotian Infrra has successfully completed 15+ residential projects across Navi
+                Under his leadership, Kotian Infrra has successfully completed 20+ residential projects across Navi
                 Mumbai and Mumbai, earning a reputation for timely delivery, quality construction, and transparent dealings.
               </p>
               <p className="text-muted-foreground mb-4 leading-relaxed">

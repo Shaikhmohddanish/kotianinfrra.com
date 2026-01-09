@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Kotian Infrra",
   },
   description:
-    "Kotian Infrra is a leading real estate developer in Navi Mumbai and Mumbai with 25+ years of experience, 15+ completed projects, and 1000+ happy customers. Explore our residential projects in Ulwe, Karanjade, and Kamothe.",
+    "Kotian Infrra is a leading real estate developer in Navi Mumbai and Mumbai with 25+ years of experience, 20+ completed projects, and 1000+ happy customers. Explore our residential projects in Ulwe, Karanjade, and Kamothe.",
   keywords: "real estate, Navi Mumbai, Mumbai, apartments, flats, Ulwe, Karanjade, Kamothe, Kotian Infrra, residential projects",
   authors: [{ name: "Kotian Infrra" }],
   alternates: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Kotian Infrra - Building Dreams Since 25+ Years",
-    description: "Leading real estate developer in Navi Mumbai and Mumbai with 15+ completed projects and 1000+ happy customers.",
+    description: "Leading real estate developer in Navi Mumbai and Mumbai with 20+ completed projects and 1000+ happy customers.",
     url: "/",
     siteName: "Kotian Infrra",
     type: "website",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Kotian Infrra - Building Dreams Since 25+ Years",
-    description: "Leading real estate developer in Navi Mumbai and Mumbai with 15+ completed projects and 1000+ happy customers.",
+    description: "Leading real estate developer in Navi Mumbai and Mumbai with 20+ completed projects and 1000+ happy customers.",
     images: ["/images/logo.png"],
   },
   icons: {

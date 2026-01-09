@@ -10,7 +10,7 @@ interface Stat {
 
 const stats: Stat[] = [
   { value: 25, suffix: "+", label: "Years Experience" },
-  { value: 15, suffix: "+", label: "Completed Projects" },
+  { value: 20, suffix: "+", label: "Completed Projects" },
   { value: 3, suffix: "", label: "Ongoing Projects" },
   { value: 1000, suffix: "+", label: "Happy Customers" },
   { value: 1000000, suffix: "+", label: "Sq.Ft Delivered" },
