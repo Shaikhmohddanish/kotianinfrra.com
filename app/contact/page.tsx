@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Kotian Infra for enquiries, pricing, and site visits. Reach us via phone, email, or WhatsApp in Navi Mumbai.",
+    "Contact Kotian Infrra for enquiries, pricing, and site visits. Reach us via phone, email, or WhatsApp in Navi Mumbai and Mumbai.",
   alternates: {
     canonical: "/contact",
   },
@@ -181,7 +181,7 @@ export default function ContactPage() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Kotian Infra Office Location"
+                    title="Kotian Infrra Office Location"
                   />
                 </div>
               </div>

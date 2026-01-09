@@ -5,9 +5,9 @@ import HeroSection from "@/components/hero-section"
 import StatsCounter from "@/components/stats-counter"
 
 export const metadata: Metadata = {
-  title: "About Us | Kotian Infra",
+  title: "About Us | Kotian Infrra",
   description:
-    "Learn about Kotian Infra's 30+ years journey in real estate development under the leadership of Mr. Subhakar Kotian.",
+    "Learn about Kotian Infrra's 25+ years journey in real estate development under the leadership of Mr. Subhakar Kotian.",
 }
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
       <div className="pt-16 md:pt-20">
         <HeroSection
           title="About Us"
-          subtitle="Building trust and delivering excellence for over three decades"
+          subtitle="Building trust and delivering excellence for over two and a half decades"
           backgroundImage="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop"
         />
       </div>
@@ -28,7 +28,7 @@ export default function AboutPage() {
             <div className="relative w-full max-w-md mx-auto md:mx-0 rounded-lg overflow-hidden border border-border aspect-square min-h-[320px]">
               <Image
                 src="/images/founder.jpeg"
-                alt="Mr. Subhakar Kotian - Founder of Kotian Infra"
+                alt="Mr. Subhakar Kotian - Founder of Kotian Infrra"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 448px"
@@ -41,17 +41,65 @@ export default function AboutPage() {
               </h2>
               <p className="text-primary font-medium mb-6">Founder & Managing Director</p>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                With over 30 years of experience in the real estate industry, Mr. Subhakar Kotian has been the driving
-                force behind Kotian Infra's success. His vision of creating quality homes at affordable prices has
+                With over 25 years of experience in the real estate industry, Mr. Subhakar Kotian has been the driving
+                force behind Kotian Infrra's success. His vision of creating quality homes at affordable prices has
                 helped thousands of families find their dream homes.
               </p>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                Under his leadership, Kotian Infra has successfully completed 15+ residential projects across Navi
-                Mumbai, earning a reputation for timely delivery, quality construction, and transparent dealings.
+                Under his leadership, Kotian Infrra has successfully completed 15+ residential projects across Navi
+                Mumbai and Mumbai, earning a reputation for timely delivery, quality construction, and transparent dealings.
+              </p>
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                Mr. Kotian served as the 1st President of{" "}
+                <a
+                  href="https://banmraigad.in/past-president"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  CredAI Banmraigad
+                </a>{" "}
+                (2001-05), contributing significantly to the development and organization of the real estate industry in the region.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 His philosophy of putting customers first and maintaining the highest standards of construction has made
-                Kotian Infra a trusted name in the real estate sector.
+                Kotian Infrra a trusted name in the real estate sector.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partner Section */}
+      <section className="py-16 md:py-24 bg-card border-y border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative w-full max-w-md mx-auto md:mx-0 rounded-lg overflow-hidden border border-border aspect-square min-h-[320px]">
+              <Image
+                src="/images/Sagar-Patel.png"
+                alt="Mr. Sagar Patel - Partner"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 448px"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">
+                Mr Sagar <span className="text-primary">Patel</span>
+              </h2>
+              <p className="text-primary font-medium mb-6">Partner</p>
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                With over 15 years of experience in the real estate industry, Mr Sagar Patel brings extensive expertise and strategic vision to Kotian Infrra as a valued partner. His
+                deep understanding of the real estate market and commitment to excellence has been instrumental in
+                driving the company's growth and success.
+              </p>
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                With a focus on innovation and customer satisfaction, Mr Patel works closely with the team to ensure
+                every project meets the highest standards of quality and delivers exceptional value to homebuyers.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                His collaborative approach and dedication to building lasting relationships have strengthened Kotian
+                Infrra's position as a trusted name in Navi Mumbai and Mumbai's real estate sector.
               </p>
             </div>
           </div>
@@ -88,7 +136,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3 text-foreground">Our Vision</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To be the most trusted real estate developer in Navi Mumbai, known for integrity, quality, and customer
+                To be the most trusted real estate developer in Navi Mumbai and Mumbai, known for integrity, quality, and customer
                 satisfaction.
               </p>
             </div>
@@ -114,7 +162,7 @@ export default function AboutPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               Our <span className="text-primary">Journey</span>
             </h2>
-            <p className="text-muted-foreground">Three decades of building dreams and creating communities</p>
+            <p className="text-muted-foreground">Over two and a half decades of building dreams and creating communities</p>
           </div>
 
           <div className="max-w-3xl mx-auto">
@@ -128,7 +176,7 @@ export default function AboutPage() {
                   <h3 className="font-semibold text-lg text-foreground">The Beginning</h3>
                   <p className="text-primary text-sm mb-2">1990s</p>
                   <p className="text-muted-foreground">
-                    Mr. Subhakar Kotian founded Kotian Infra with a vision to provide quality homes in Navi Mumbai.
+                    Mr. Subhakar Kotian founded Kotian Infrra with a vision to provide quality homes in Navi Mumbai and Mumbai.
                   </p>
                 </div>
               </div>
@@ -156,7 +204,7 @@ export default function AboutPage() {
                   <h3 className="font-semibold text-lg text-foreground">Milestone Achievement</h3>
                   <p className="text-primary text-sm mb-2">2010s</p>
                   <p className="text-muted-foreground">
-                    Crossed 1 million sq.ft of delivered space and served over 1000+ happy families.
+                    Crossed 1 million sq.ft of delivered space and served over 1000+ happy families across Navi Mumbai and Mumbai.
                   </p>
                 </div>
               </div>

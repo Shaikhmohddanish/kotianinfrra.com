@@ -63,14 +63,14 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-2" onClick={(e) => handleNavClick(e, "/")}>
               <Image
                 src="/images/logo.png"
-                alt="Kotian Infra Logo"
+                alt="Kotian Infrra Logo"
                 width={48}
                 height={48}
                 className="w-12 h-12 md:w-12 md:h-12 rounded"
               />
               <div>
                 <span className="text-base sm:text-lg md:text-xl font-bold text-foreground">Kotian</span>
-                <span className="text-base sm:text-lg md:text-xl font-bold text-primary"> Infra</span>
+                <span className="text-base sm:text-lg md:text-xl font-bold text-primary"> Infrra</span>
               </div>
             </Link>
 

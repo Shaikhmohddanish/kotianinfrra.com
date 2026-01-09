@@ -2,9 +2,9 @@ import type { Metadata } from "next"
 import HeroSection from "@/components/hero-section"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Kotian Infra",
+  title: "Privacy Policy | Kotian Infrra",
   description:
-    "Read Kotian Infra's privacy policy covering what information we collect, how we use it, and your choices.",
+    "Read Kotian Infrra's privacy policy covering what information we collect, how we use it, and your choices.",
 }
 
 export default function PrivacyPolicyPage() {
@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
             <div>
               <p className="text-sm text-muted-foreground">Effective date: {effectiveDate}</p>
               <p className="text-muted-foreground mt-4 leading-relaxed">
-                This Privacy Policy explains how Kotian Infra ("we", "us", "our") collects, uses, discloses, and
+                This Privacy Policy explains how Kotian Infrra ("we", "us", "our") collects, uses, discloses, and
                 protects information when you visit our website or contact us.
               </p>
             </div>

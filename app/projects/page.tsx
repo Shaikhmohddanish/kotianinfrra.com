@@ -4,9 +4,9 @@ import ProjectCard from "@/components/project-card"
 import { completedProjects, ongoingProjects } from "@/lib/projects"
 
 export const metadata: Metadata = {
-  title: "Our Projects | Kotian Infra",
+  title: "Our Projects | Kotian Infrra",
   description:
-    "Explore our portfolio of completed and ongoing residential projects in Ulwe, Karanjade, and Kamothe, Navi Mumbai.",
+    "Explore our portfolio of completed and ongoing residential projects in Ulwe, Karanjade, and Kamothe, Navi Mumbai and Mumbai.",
 }
 
 export default function ProjectsPage() {
@@ -15,7 +15,7 @@ export default function ProjectsPage() {
       <div className="pt-16 md:pt-20">
         <HeroSection
           title="Our Projects"
-          subtitle="Explore our portfolio of quality residential developments across Navi Mumbai"
+          subtitle="Explore our portfolio of quality residential developments across Navi Mumbai and Mumbai"
           backgroundImage="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop"
         />
       </div>

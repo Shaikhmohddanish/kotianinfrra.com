@@ -14,35 +14,35 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   metadataBase: new URL("https://kotianinfrra.com"),
   title: {
-    default: "Kotian Infra - Building Dreams Since 30+ Years",
-    template: "%s | Kotian Infra",
+    default: "Kotian Infrra - Building Dreams Since 30+ Years",
+    template: "%s | Kotian Infrra",
   },
   description:
-    "Kotian Infra is a leading real estate developer in Navi Mumbai with 30+ years of experience, 15+ completed projects, and 1000+ happy customers. Explore our residential projects in Ulwe, Karanjade, and Kamothe.",
-  keywords: "real estate, Navi Mumbai, apartments, flats, Ulwe, Karanjade, Kamothe, Kotian Infra, residential projects",
-  authors: [{ name: "Kotian Infra" }],
+    "Kotian Infrra is a leading real estate developer in Navi Mumbai and Mumbai with 25+ years of experience, 15+ completed projects, and 1000+ happy customers. Explore our residential projects in Ulwe, Karanjade, and Kamothe.",
+  keywords: "real estate, Navi Mumbai, Mumbai, apartments, flats, Ulwe, Karanjade, Kamothe, Kotian Infrra, residential projects",
+  authors: [{ name: "Kotian Infrra" }],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Kotian Infra - Building Dreams Since 30+ Years",
-    description: "Leading real estate developer in Navi Mumbai with 15+ completed projects and 1000+ happy customers.",
+    title: "Kotian Infrra - Building Dreams Since 25+ Years",
+    description: "Leading real estate developer in Navi Mumbai and Mumbai with 15+ completed projects and 1000+ happy customers.",
     url: "/",
-    siteName: "Kotian Infra",
+    siteName: "Kotian Infrra",
     type: "website",
     images: [
       {
         url: "/images/logo.png",
         width: 1200,
         height: 630,
-        alt: "Kotian Infra",
+        alt: "Kotian Infrra",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kotian Infra - Building Dreams Since 30+ Years",
-    description: "Leading real estate developer in Navi Mumbai with 15+ completed projects and 1000+ happy customers.",
+    title: "Kotian Infrra - Building Dreams Since 25+ Years",
+    description: "Leading real estate developer in Navi Mumbai and Mumbai with 15+ completed projects and 1000+ happy customers.",
     images: ["/images/logo.png"],
   },
   icons: {
@@ -66,7 +66,7 @@ export default function RootLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
-    name: "Kotian Infra",
+    name: "Kotian Infrra",
     url: "https://kotianinfrra.com",
     logo: "https://kotianinfrra.com/images/logo.png",
     telephone: "+91 9326421282",

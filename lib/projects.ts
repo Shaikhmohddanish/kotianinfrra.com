@@ -68,25 +68,20 @@ export const completedProjects: Project[] = [
 
 export const ongoingProjects: Project[] = [
   {
-    id: "9",
-    name: "Sai Palace Phase 2",
+    id: "10",
+    name: "Sai Palace",
     location: "Karanjade",
     image: "/images/sai-20palace-20-7bkaranjade-7d.jpeg",
     status: "ongoing",
-  },
-  {
-    id: "10",
-    name: "Kotian Heights",
-    location: "Ulwe",
-    image: "/images/exotica-ulwe.jpeg",
-    status: "ongoing",
+    whatsappMessage: "Hello! I'm interested in Sai Palace (Karanjade). Please share details like price, floor plans, and site visit availability.",
   },
   {
     id: "11",
-    name: "Green Valley",
-    location: "Kamothe",
-    image: "/images/sai-20samarpan-20-28kamothe-29.jpeg",
+    name: "Sai Dham",
+    location: "Karanjade",
+    image: "/images/Sai Dham.jpg",
     status: "ongoing",
+    whatsappMessage: "Hello! I'm interested in Sai Dham (Karanjade). Please share details like price, floor plans, and site visit availability.",
   },
   {
     id: "12",

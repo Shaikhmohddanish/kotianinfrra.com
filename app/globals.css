@@ -3,7 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Updated to dark theme matching Kotian Infra logo colors: Black background, white text, gold accent */
+/* Updated to dark theme matching Kotian Infrra logo colors: Black background, white text, gold accent */
 :root {
   --background: oklch(0.08 0 0);
   --foreground: oklch(0.98 0 0);

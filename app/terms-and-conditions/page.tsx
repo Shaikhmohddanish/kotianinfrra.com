@@ -2,9 +2,9 @@ import type { Metadata } from "next"
 import HeroSection from "@/components/hero-section"
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Kotian Infra",
+  title: "Terms & Conditions | Kotian Infrra",
   description:
-    "Read the terms and conditions for using the Kotian Infra website, including disclaimers, limitations, and policies.",
+    "Read the terms and conditions for using the Kotian Infrra website, including disclaimers, limitations, and policies.",
 }
 
 export default function TermsAndConditionsPage() {
@@ -64,7 +64,7 @@ export default function TermsAndConditionsPage() {
               <h2 className="text-xl md:text-2xl font-semibold text-foreground">Intellectual Property</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Unless stated otherwise, the website content (including text, logos, and images) is owned by or
-                licensed to Kotian Infra. You may not copy, reproduce, or distribute content without permission.
+                licensed to Kotian Infrra. You may not copy, reproduce, or distribute content without permission.
               </p>
             </div>
 
@@ -79,7 +79,7 @@ export default function TermsAndConditionsPage() {
             <div className="space-y-3">
               <h2 className="text-xl md:text-2xl font-semibold text-foreground">Limitation of Liability</h2>
               <p className="text-muted-foreground leading-relaxed">
-                To the extent permitted by law, Kotian Infra will not be liable for indirect, incidental, special, or
+                To the extent permitted by law, Kotian Infrra will not be liable for indirect, incidental, special, or
                 consequential damages arising from your use of this website.
               </p>
             </div>

@@ -2,9 +2,9 @@ import type { MetadataRoute } from "next"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Kotian Infra",
-    short_name: "Kotian Infra",
-    description: "Real estate developer in Navi Mumbai with 30+ years of experience.",
+    name: "Kotian Infrra",
+    short_name: "Kotian Infrra",
+    description: "Real estate developer in Navi Mumbai and Mumbai with 25+ years of experience.",
     start_url: "/",
     display: "standalone",
     background_color: "#0a0a0a",

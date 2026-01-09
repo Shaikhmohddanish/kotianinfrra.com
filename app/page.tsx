@@ -10,7 +10,7 @@ import { completedProjects, ongoingProjects } from "@/lib/projects"
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "Kotian Infra is a trusted real estate developer in Navi Mumbai. Explore ongoing and completed residential projects in Ulwe, Karanjade, and Kamothe.",
+    "Kotian Infrra is a trusted real estate developer in Navi Mumbai and Mumbai. Explore ongoing and completed residential projects in Ulwe, Karanjade, and Kamothe.",
   alternates: {
     canonical: "/",
   },
@@ -25,49 +25,76 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px] max-h-[900px] flex items-center justify-center pt-16">
+      <section className="relative h-screen min-h-[600px] max-h-[900px] flex items-center pt-16">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
-            alt="Kotian Infra - Building Dreams"
+            src="/images/Banner.jpg"
+            alt="Exclusive 1 & 2 BHK Apartments - Karanjade"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-background/85" />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
         </div>
 
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <Image
-            src="/images/logo.png"
-            alt="Kotian Infra Logo"
-            width={120}
-            height={120}
-            className="mx-auto mb-6 rounded-lg"
-          />
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-foreground text-balance">
-            Building Dreams <span className="text-primary">Since 30+ Years</span>
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">
-            Your trusted partner in real estate development. Creating quality homes and commercial spaces in Navi
-            Mumbai.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/projects">
-              <Button size="lg" className="w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90">
-                View Projects
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </Link>
-            <Link href="/contact">
-              <Button
-                size="lg"
-                variant="outline"
-                className="w-full sm:w-auto border-foreground text-foreground hover:bg-foreground hover:text-background bg-transparent"
-              >
-                Contact Us
-              </Button>
-            </Link>
+        <div className="relative z-10 w-full">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            {/* Main Brand Section */}
+            <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+              <Image
+                src="/images/logo.png"
+                alt="Kotian Infrra Logo"
+                width={120}
+                height={120}
+                className="mx-auto mb-4 sm:mb-5 md:mb-6 rounded-lg w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
+              />
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-1 sm:mb-2 md:mb-3">
+                Building Dreams
+              </h1>
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-primary mb-3 sm:mb-4 md:mb-5">
+                Since 25+ Years
+              </p>
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 max-w-3xl mx-auto px-2 sm:px-4">
+                Your trusted partner in real estate development. Creating quality homes and commercial spaces in Navi Mumbai and Mumbai.
+              </p>
+            </div>
+
+            {/* Apartment Details Section */}
+            <div className="mx-auto w-full max-w-5xl px-2 sm:px-0">
+              <div className="rounded-xl sm:rounded-2xl border border-white/20 bg-black/70 backdrop-blur-md p-4 sm:p-5 md:p-6 lg:p-7">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white text-balance text-center mb-3 sm:mb-4 md:mb-5">
+                  Exclusive <span className="text-primary">1 & 2 BHK</span> Apartments
+                </h2>
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
+                  <div className="rounded-lg bg-white/10 p-2.5 sm:p-3 md:p-4 hover:bg-white/15 transition-colors">
+                    <p className="text-xs md:text-sm text-gray-300">Location</p>
+                    <p className="mt-1 font-medium text-white text-sm sm:text-base md:text-lg">Karanjade</p>
+                  </div>
+                  <div className="rounded-lg bg-white/10 p-2.5 sm:p-3 md:p-4 hover:bg-white/15 transition-colors">
+                    <p className="text-xs md:text-sm text-gray-300">1 BHK</p>
+                    <p className="mt-1 font-medium text-white text-sm sm:text-base md:text-lg">45 Lacs + taxes</p>
+                  </div>
+                  <div className="rounded-lg bg-white/10 p-2.5 sm:p-3 md:p-4 hover:bg-white/15 transition-colors">
+                    <p className="text-xs md:text-sm text-gray-300">2 BHK</p>
+                    <p className="mt-1 font-medium text-white text-sm sm:text-base md:text-lg">70 Lacs + taxes</p>
+                  </div>
+                  <div className="rounded-lg bg-white/10 p-2.5 sm:p-3 md:p-4 hover:bg-white/15 transition-colors">
+                    <p className="text-xs md:text-sm text-gray-300">Tower</p>
+                    <p className="mt-1 font-medium text-white text-sm sm:text-base md:text-lg">G+13 Storey</p>
+                  </div>
+                  <div className="rounded-lg bg-white/10 p-2.5 sm:p-3 md:p-4 hover:bg-white/15 transition-colors">
+                    <p className="text-xs md:text-sm text-gray-300">Amenities</p>
+                    <p className="mt-1 font-medium text-white text-sm sm:text-base md:text-lg">Rooftop amenities</p>
+                  </div>
+                  <a href="tel:9326421282" className="rounded-lg bg-white/10 p-2.5 sm:p-3 md:p-4 hover:bg-white/20 transition-colors">
+                    <p className="text-xs md:text-sm text-gray-300">Contact</p>
+                    <p className="mt-1 font-semibold text-primary text-sm sm:text-base md:text-lg">9326421282</p>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -84,7 +111,7 @@ export default function HomePage() {
                 Trusted Name in <span className="text-primary">Real Estate</span>
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Founded by Mr. Subhakar Kotian, Kotian Infra has been transforming the real estate landscape of Navi
+                Founded by Mr. Subhakar Kotian, Kotian Infrra has been transforming the real estate landscape of Navi
                 Mumbai for over three decades. Our commitment to quality construction and customer satisfaction has made
                 us a preferred choice for homebuyers.
               </p>
@@ -131,7 +158,7 @@ export default function HomePage() {
             <div className="relative aspect-square rounded-lg overflow-hidden border border-border">
               <Image
                 src="/images/sai-20palace-20-7bkaranjade-7d.jpeg"
-                alt="Kotian Infra Project"
+                alt="Kotian Infrra Project"
                 fill
                 className="object-cover"
               />
@@ -148,7 +175,7 @@ export default function HomePage() {
               Featured <span className="text-primary">Projects</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explore our portfolio of residential projects across Navi Mumbai
+              Explore our portfolio of residential projects across Navi Mumbai and Mumbai
             </p>
           </div>
 

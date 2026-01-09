@@ -12,18 +12,18 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2">
               <Image
                 src="/images/logo.png"
-                alt="Kotian Infra Logo"
+                alt="Kotian Infrra Logo"
                 width={48}
                 height={48}
                 className="w-12 h-12 rounded"
               />
               <div>
                 <span className="text-xl font-bold text-foreground">Kotian</span>
-                <span className="text-xl font-bold text-primary"> Infra</span>
+                <span className="text-xl font-bold text-primary"> Infrra</span>
               </div>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Building dreams for over 30 years. Your trusted partner in real estate development in Navi Mumbai.
+              Building dreams for over 25 years. Your trusted partner in real estate development in Navi Mumbai and Mumbai.
             </p>
           </div>
 
@@ -113,7 +113,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Kotian Infra. All rights reserved.
+              © {new Date().getFullYear()} Kotian Infrra. All rights reserved.
             </p>
             <p className="text-sm text-primary">Building Trust, Delivering Excellence</p>
           </div>
