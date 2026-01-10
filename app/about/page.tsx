@@ -39,31 +39,34 @@ export default function AboutPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">
                 Mr. Subhakar <span className="text-primary">Kotian</span>
               </h2>
-              <p className="text-primary font-medium mb-6">Founder & Managing Director</p>
+              <p className="text-primary font-medium mb-6">Founder & CEO</p>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                With over 25 years of experience in the real estate industry, Mr. Subhakar Kotian has been the driving
-                force behind Kotian Infrra's success. His vision of creating quality homes at affordable prices has
-                helped thousands of families find their dream homes.
+                A driving force at Kotian Infrra, his leadership defines the standard of excellence in all our creations. 
+                With over 30 years of experience in the real estate industry, Mr. Subhakar Kotian is a highly respected 
+                and trusted name known for quality, integrity, and vision.
               </p>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                Under his leadership, Kotian Infrra has successfully completed 20+ residential projects across Navi
-                Mumbai and Mumbai, earning a reputation for timely delivery, quality construction, and transparent dealings.
-              </p>
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                Mr. Kotian served as the 1st President of{" "}
+                He is the Founder and First President of the Builders Association of Navi Mumbai (BanmRaigad) under{" "}
                 <a
                   href="https://banmraigad.in/past-president"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
                 >
-                  CredAI Banmraigad
+                  CREDAI
                 </a>{" "}
-                (2001-05), contributing significantly to the development and organization of the real estate industry in the region.
+                and served in this prestigious role from 2001 to 2005, contributing significantly to the organized 
+                growth of the real estate sector in Navi Mumbai.
+              </p>
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                Under his strong and inspiring leadership, the group has successfully delivered 25+ premium residential 
+                projects across Mumbai and Navi Mumbai, each reflecting superior construction quality, thoughtful planning, 
+                and timely delivery. His unwavering focus on transparency, long-term value, and customer satisfaction has 
+                earned the trust and confidence of thousands of families.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                His philosophy of putting customers first and maintaining the highest standards of construction has made
-                Kotian Infrra a trusted name in the real estate sector.
+                Mr. Subhakar Kotian's philosophy of building not just homes but lasting relationships has made his 
+                organization a symbol of reliability, excellence, and credibility in the real estate industry.
               </p>
             </div>
           </div>
