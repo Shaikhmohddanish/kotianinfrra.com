@@ -16,7 +16,7 @@ export default function TermsAndConditionsPage() {
         <HeroSection
           title="Terms & Conditions"
           subtitle="Please read these terms carefully before using our website"
-          backgroundImage="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop"
+           backgroundImage="/images/terms-hero.jpg"
         />
       </div>
 

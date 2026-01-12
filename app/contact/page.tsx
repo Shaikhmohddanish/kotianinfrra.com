@@ -24,7 +24,7 @@ export default function ContactPage() {
         <HeroSection
           title="Contact Us"
           subtitle="Get in touch with our team for enquiries and site visits"
-          backgroundImage="https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=2096&auto=format&fit=crop"
+          backgroundImage="/images/contact-hero.jpg"
         />
       </div>
 

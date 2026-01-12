@@ -17,7 +17,7 @@ export default function AboutPage() {
         <HeroSection
           title="About Us"
           subtitle="Building trust and delivering excellence for over two and a half decades"
-          backgroundImage="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop"
+          backgroundImage="/images/about-hero.jpg"
         />
       </div>
 

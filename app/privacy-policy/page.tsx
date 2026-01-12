@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
         <HeroSection
           title="Privacy Policy"
           subtitle="How we collect, use, and protect your information"
-          backgroundImage="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop"
+           backgroundImage="/images/privacy-hero.jpg"
         />
       </div>
 

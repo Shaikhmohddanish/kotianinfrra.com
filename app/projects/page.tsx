@@ -16,7 +16,7 @@ export default function ProjectsPage() {
         <HeroSection
           title="Our Projects"
           subtitle="Explore our portfolio of quality residential developments across Navi Mumbai and Mumbai"
-          backgroundImage="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop"
+          backgroundImage="/images/projects-hero.jpg"
         />
       </div>
 
