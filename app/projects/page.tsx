@@ -34,6 +34,7 @@ export default function ProjectsPage() {
             {ongoingProjects.map((project) => (
               <ProjectCard
                 key={project.id}
+                slug={project.slug}
                 name={project.name}
                 location={project.location}
                 image={project.image}
@@ -59,6 +60,7 @@ export default function ProjectsPage() {
             {completedProjects.map((project) => (
               <ProjectCard
                 key={project.id}
+                slug={project.slug}
                 name={project.name}
                 location={project.location}
                 image={project.image}

@@ -7,7 +7,7 @@ import StatsCounter from "@/components/stats-counter"
 export const metadata: Metadata = {
   title: "About Us | Kotian Infrra",
   description:
-    "Learn about Kotian Infrra's 25+ years journey in real estate development under the leadership of Mr. Subhakar Kotian.",
+    "Learn about Kotian Infrra's 25+ years journey in real estate development under the leadership of Mr. Subhakar Kotian and our partners.",
 }
 
 export default function AboutPage() {
@@ -103,6 +103,37 @@ export default function AboutPage() {
               <p className="text-muted-foreground leading-relaxed">
                 His collaborative approach and dedication to building lasting relationships have strengthened Kotian
                 Infrra's position as a trusted name in Navi Mumbai and Mumbai's real estate sector.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partner Section */}
+      <section className="py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative w-full max-w-md mx-auto md:mx-0 rounded-lg overflow-hidden border border-border aspect-square min-h-[320px] md:order-2">
+              <Image
+                src="/images/Sumit%20Kotian.png"
+                alt="Mr. Sumit Kotian - Partner"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 448px"
+              />
+            </div>
+            <div className="md:order-1">
+              <h2 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">
+                Mr. Sumit <span className="text-primary">Kotian</span>
+              </h2>
+              <p className="text-primary font-medium mb-6">Partner</p>
+              <p className="text-muted-foreground leading-relaxed">
+                Sumit Kotian is a visionary partner at Kotian Infrra, known for bringing a forward-thinking mindset and
+                refined execution to every project. With solid industry experience, he plays a key role in shaping
+                developments that balance modern design, functionality, and long-term value. Sumit has a sharp eye for
+                planning, aesthetics, and future-ready concepts, ensuring each project stands out while remaining
+                practical and reliable. His ability to think ahead and innovate thoughtfully adds a distinct edge to
+                Kotian Infrra’s developments, making him an essential force behind the brand’s growth and evolution.
               </p>
             </div>
           </div>

@@ -1,9 +1,11 @@
 import Image from "next/image"
+import Link from "next/link"
 import { MapPin } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
 interface ProjectCardProps {
+  slug?: string
   name: string
   location: string
   image: string
@@ -11,7 +13,7 @@ interface ProjectCardProps {
   whatsappMessage?: string
 }
 
-export default function ProjectCard({ name, location, image, status, whatsappMessage }: ProjectCardProps) {
+export default function ProjectCard({ slug, name, location, image, status, whatsappMessage }: ProjectCardProps) {
   const phoneNumber = "919326421282"
   const defaultMessage = `Hello! I'm interested in ${name} (${location}). Please share details like price, floor plans, and site visit availability.`
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage ?? defaultMessage)}`
@@ -47,14 +49,16 @@ export default function ProjectCard({ name, location, image, status, whatsappMes
     </Card>
   )
 
+  if (status === "ongoing" && slug) {
+    return (
+      <Link href={`/projects/${slug}`} className="block" aria-label={`View details for ${name}`}>
+        {content}
+      </Link>
+    )
+  }
+
   return (
-    <a
-      href={whatsappUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block"
-      aria-label={`Enquire about ${name} on WhatsApp`}
-    >
+    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block" aria-label={`Enquire about ${name} on WhatsApp`}>
       {content}
     </a>
   )

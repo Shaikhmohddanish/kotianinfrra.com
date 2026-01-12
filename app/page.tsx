@@ -25,7 +25,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px] max-h-[900px] flex items-center pt-16">
+      <section className="relative min-h-[100svh] min-h-[600px] max-h-[900px] flex items-center pt-[calc(4rem+env(safe-area-inset-top)+0.75rem)] md:pt-[calc(5rem+env(safe-area-inset-top)+0.75rem)]">
         <div className="absolute inset-0">
           <Image
             src="/images/Banner.jpg"
@@ -157,7 +157,7 @@ export default function HomePage() {
             </div>
             <div className="relative aspect-square rounded-lg overflow-hidden border border-border">
               <Image
-                src="/images/sai-20palace-20-7bkaranjade-7d.jpeg"
+                src="/images/Sai-dham.jpeg"
                 alt="Kotian Infrra Project"
                 fill
                 className="object-cover"
@@ -183,6 +183,7 @@ export default function HomePage() {
             {featuredProjects.map((project) => (
               <ProjectCard
                 key={project.id}
+                slug={project.slug}
                 name={project.name}
                 location={project.location}
                 image={project.image}
