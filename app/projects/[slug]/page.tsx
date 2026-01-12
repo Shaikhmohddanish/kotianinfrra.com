@@ -61,6 +61,7 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
   const pricing = project.details?.pricing ?? []
   const amenities = project.details?.amenities ?? []
   const reraNumber = project.details?.reraNumber
+  const map = project.details?.map
 
   return (
     <>
@@ -190,6 +191,39 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
                 </CardContent>
               </Card>
 
+              {map && (
+                <Card className="border-border lg:col-span-2">
+                  <CardHeader>
+                    <CardTitle className="text-xl">Location & Map</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                      <div className="flex items-center gap-2 text-sm text-foreground">
+                        <MapPin className="w-4 h-4 text-primary" />
+                        <span className="font-medium">{sector ?? project.location}</span> 
+                        <Button variant="outline" size="sm" asChild>
+                          <a href={map.googleMapsUrl} target="_blank" rel="noopener noreferrer">
+                            Open in Google Maps
+                          </a>
+                        </Button>
+                      </div>
+                    </div>
+
+                    <div className="relative w-full overflow-hidden rounded-lg border border-border bg-card aspect-[16/9]">
+                      <iframe
+                        src={map.embedUrl}
+                        className="absolute inset-0 h-full w-full"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title={`${project.name} location map`}
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
+
               <Card className="border-border lg:col-span-2">
                 <CardHeader>
                   <CardTitle className="text-xl">Units & Pricing</CardTitle>
@@ -227,26 +261,6 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
                 </CardContent>
               </Card>
 
-              <Card className="border-border lg:col-span-2">
-                <CardHeader>
-                  <CardTitle className="text-xl">Amenities & Highlights</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  {amenities.length === 0 ? (
-                    <p className="text-sm text-muted-foreground">Amenities information will be shared on enquiry.</p>
-                  ) : (
-                    <ul className="grid sm:grid-cols-2 gap-2">
-                      {amenities.map((a) => (
-                        <li key={a} className="text-sm text-foreground flex items-start gap-2">
-                          <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
-                          <span>{a}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </CardContent>
-              </Card>
-
               <Card className="border-border">
                 <CardHeader>
                   <CardTitle className="text-xl">Enquiry</CardTitle>
@@ -267,6 +281,26 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
                   <p className="text-xs text-muted-foreground">
                     Share your preferred unit type and budget — we’ll respond with availability and next steps.
                   </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-border lg:col-span-2">
+                <CardHeader>
+                  <CardTitle className="text-xl">Amenities & Highlights</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  {amenities.length === 0 ? (
+                    <p className="text-sm text-muted-foreground">Amenities information will be shared on enquiry.</p>
+                  ) : (
+                    <ul className="grid sm:grid-cols-2 gap-2">
+                      {amenities.map((a) => (
+                        <li key={a} className="text-sm text-foreground flex items-start gap-2">
+                          <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
+                          <span>{a}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </CardContent>
               </Card>
             </div>

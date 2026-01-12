@@ -36,7 +36,7 @@ export default function ProjectsPage() {
                 key={project.id}
                 slug={project.slug}
                 name={project.name}
-                location={project.location}
+                location={project.details?.sector ?? project.location}
                 image={project.image}
                 status={project.status}
                 whatsappMessage={project.whatsappMessage}

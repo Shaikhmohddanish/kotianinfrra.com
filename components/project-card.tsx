@@ -1,8 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
-import { MapPin } from "lucide-react"
+import { ArrowRight, MapPin } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 
 interface ProjectCardProps {
   slug?: string
@@ -20,7 +21,7 @@ export default function ProjectCard({ slug, name, location, image, status, whats
 
   const content = (
     <Card
-      className="overflow-hidden group bg-card border-border hover:border-primary/50 transition-colors cursor-pointer"
+      className="overflow-hidden group bg-card border-border hover:border-primary/50 transition-colors"
     >
       <div className="relative aspect-[4/5] overflow-hidden">
         <Image
@@ -45,17 +46,22 @@ export default function ProjectCard({ slug, name, location, image, status, whats
           <MapPin className="w-4 h-4 text-primary" />
           <span>{location}</span>
         </div>
+
+        {status === "ongoing" && slug && (
+          <div className="mt-4">
+            <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+              <Link href={`/projects/${slug}`} aria-label={`View details for ${name}`}>
+                View Details
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </Button>
+          </div>
+        )}
       </CardContent>
     </Card>
   )
 
-  if (status === "ongoing" && slug) {
-    return (
-      <Link href={`/projects/${slug}`} className="block" aria-label={`View details for ${name}`}>
-        {content}
-      </Link>
-    )
-  }
+  if (status === "ongoing") return content
 
   return (
     <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block" aria-label={`Enquire about ${name} on WhatsApp`}>

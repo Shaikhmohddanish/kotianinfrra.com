@@ -115,7 +115,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative w-full max-w-md mx-auto md:mx-0 rounded-lg overflow-hidden border border-border aspect-square min-h-[320px] md:order-2">
               <Image
-                src="/images/Sumit%20Kotian.png"
+                src="/images/Sumit-kotian.jpg"
                 alt="Mr. Sumit Kotian - Partner"
                 fill
                 className="object-cover"
