@@ -1,10 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
 import type { Metadata } from "next"
+import fs from "node:fs/promises"
+import path from "node:path"
 import { ArrowRight, Building2, Users, Award, Shield } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import StatsCounter from "@/components/stats-counter"
 import ProjectCard from "@/components/project-card"
+import ConnectivitySection, { type ConnectivityItem } from "@/components/connectivity-section"
 import { completedProjects, ongoingProjects } from "@/lib/projects"
 
 export const metadata: Metadata = {
@@ -19,8 +22,53 @@ export const metadata: Metadata = {
   },
 }
 
-export default function HomePage() {
+function toConnectivityLabel(fileName: string) {
+  const acronyms = new Set(["SEZ"])
+  const base = fileName.replace(/\.[^/.]+$/, "")
+  const normalized = base.replace(/[_-]+/g, " ").replace(/\s+/g, " ").trim()
+
+  return normalized
+    .split(" ")
+    .map((word) => {
+      const trimmed = word.trim()
+      if (!trimmed) return trimmed
+
+      const upper = trimmed.toUpperCase()
+      if (acronyms.has(upper)) return upper
+
+      const startsWithNumber = /^\d/.test(trimmed)
+      if (startsWithNumber) return trimmed
+
+      return trimmed.charAt(0).toUpperCase() + trimmed.slice(1).toLowerCase()
+    })
+    .join(" ")
+}
+
+async function getConnectivityItems(): Promise<ConnectivityItem[]> {
+  const directoryPath = path.join(process.cwd(), "public", "images", "connectivity")
+
+  try {
+    const fileNames = await fs.readdir(directoryPath)
+    const imageNames = fileNames
+      .filter((name) => /\.(png|jpe?g|webp|avif|svg)$/i.test(name))
+      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" }))
+
+    return imageNames.map((fileName) => {
+      const label = toConnectivityLabel(fileName)
+      return {
+        src: `/images/connectivity/${encodeURIComponent(fileName)}`,
+        label,
+        alt: label,
+      }
+    })
+  } catch {
+    return []
+  }
+}
+
+export default async function HomePage() {
   const featuredProjects = [...completedProjects.slice(0, 3), ...ongoingProjects.slice(0, 1)]
+  const connectivityItems = await getConnectivityItems()
 
   return (
     <>
@@ -203,6 +251,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <ConnectivitySection items={connectivityItems} />
 
       {/* CTA Section */}
       <section className="py-16 md:py-24">
