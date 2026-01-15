@@ -77,7 +77,7 @@ export default function AboutPage() {
       <section className="py-16 md:py-24 bg-card border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative w-full max-w-md mx-auto md:mx-0 rounded-lg overflow-hidden border border-border aspect-square min-h-[320px]">
+            <div className="relative w-full max-w-md mx-auto md:mx-0 rounded-lg overflow-hidden border border-border aspect-square min-h-[320px] md:order-2">
               <Image
                 src="/images/Sagar-Patel.png"
                 alt="Mr. Sagar Patel - Partner"
@@ -86,7 +86,7 @@ export default function AboutPage() {
                 sizes="(max-width: 768px) 100vw, 448px"
               />
             </div>
-            <div>
+            <div className="md:order-1">
               <h2 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">
                 Mr Sagar <span className="text-primary">Patel</span>
               </h2>
@@ -113,7 +113,7 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative w-full max-w-md mx-auto md:mx-0 rounded-lg overflow-hidden border border-border aspect-square min-h-[320px] md:order-2">
+            <div className="relative w-full max-w-md mx-auto md:mx-0 rounded-lg overflow-hidden border border-border aspect-square min-h-[320px]">
               <Image
                 src="/images/Sumit-kotian.jpg"
                 alt="Mr. Sumit Kotian - Partner"
@@ -122,7 +122,7 @@ export default function AboutPage() {
                 sizes="(max-width: 768px) 100vw, 448px"
               />
             </div>
-            <div className="md:order-1">
+            <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">
                 Mr. Sumit <span className="text-primary">Kotian</span>
               </h2>
