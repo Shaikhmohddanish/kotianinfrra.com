@@ -6,8 +6,21 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname, useRouter } from "next/navigation"
-import { Menu, X, Phone } from "lucide-react"
+import { Menu, X, Phone, Facebook, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
+
+const socialLinks = [
+  {
+    href: "https://www.facebook.com/profile.php?id=61575329259824",
+    label: "Facebook",
+    Icon: Facebook,
+  },
+  {
+    href: "https://www.instagram.com/kotianinfrra_karanjade/",
+    label: "Instagram",
+    Icon: Instagram,
+  },
+]
 
 const primaryNavLinks = [
   { href: "/", label: "Home" },
@@ -92,6 +105,20 @@ export default function Header() {
 
             {/* CTA Button - Desktop */}
             <div className="hidden md:flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                {socialLinks.map(({ href, label, Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit Kotian Infrra on ${label}`}
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background text-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
               <a href="tel:9326421282" className="flex items-center gap-2">
                 <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
                   <Phone className="w-4 h-4" />
@@ -134,6 +161,24 @@ export default function Header() {
                 Call Now: 9326421282
               </Button>
             </a>
+
+            <div className="mt-6">
+              <p className="text-sm font-medium text-foreground mb-3">Follow us</p>
+              <div className="flex items-center gap-3">
+                {socialLinks.map(({ href, label, Icon }) => (
+                  <a
+                    key={`mobile-${label}`}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit Kotian Infrra on ${label}`}
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background text-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                ))}
+              </div>
+            </div>
           </nav>
         </div>
       )}

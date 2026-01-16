@@ -1,6 +1,19 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react"
+
+const socialLinks = [
+  {
+    href: "https://www.facebook.com/profile.php?id=61575329259824",
+    label: "Facebook",
+    Icon: Facebook,
+  },
+  {
+    href: "https://www.instagram.com/kotianinfrra_karanjade/",
+    label: "Instagram",
+    Icon: Instagram,
+  },
+]
 
 export default function Footer() {
   return (
@@ -25,6 +38,21 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground leading-relaxed">
               Building dreams for over 25 years. Your trusted partner in real estate development in Navi Mumbai and Mumbai.
             </p>
+
+            <div className="flex items-center gap-3 pt-1">
+              {socialLinks.map(({ href, label, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit Kotian Infrra on ${label}`}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                >
+                  <Icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -115,7 +143,23 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Kotian Infrra. All rights reserved.
             </p>
-            <p className="text-sm text-primary">Building Trust, Delivering Excellence</p>
+            <div className="flex items-center gap-4">
+              <p className="text-sm text-primary">Building Trust, Delivering Excellence</p>
+              <div className="hidden sm:flex items-center gap-2">
+                {socialLinks.map(({ href, label, Icon }) => (
+                  <a
+                    key={`bottom-${label}`}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit Kotian Infrra on ${label}`}
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background text-foreground transition-colors hover:border-primary/50 hover:text-primary"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

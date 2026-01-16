@@ -8,7 +8,9 @@ import { Button } from "@/components/ui/button"
 import StatsCounter from "@/components/stats-counter"
 import ProjectCard from "@/components/project-card"
 import ConnectivitySection, { type ConnectivityItem } from "@/components/connectivity-section"
+import TestimonialsCarousel from "@/components/testimonials-carousel"
 import { completedProjects, ongoingProjects } from "@/lib/projects"
+import { homeTestimonials } from "@/lib/testimonials"
 
 export const metadata: Metadata = {
   title: "Home",
@@ -253,6 +255,24 @@ export default async function HomePage() {
       </section>
 
       <ConnectivitySection items={connectivityItems} />
+
+      {/* Testimonials */}
+      <section className="py-16 md:py-24 bg-card border-y border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              What Our <span className="text-primary">Customers</span> Say
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Real feedback from families who chose Kotian Infrra.
+            </p>
+          </div>
+
+          <div className="relative max-w-6xl mx-auto">
+            <TestimonialsCarousel testimonials={homeTestimonials} />
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-16 md:py-24">
