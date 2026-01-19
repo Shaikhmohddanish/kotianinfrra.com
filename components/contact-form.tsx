@@ -6,20 +6,44 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError(null)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    const form = e.currentTarget
+    const formData = new FormData(form)
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    try {
+      const response = await fetch("/api/google-form-proxy", {
+        method: "POST",
+        body: formData,
+      })
+
+      const data = await response.json().catch(() => null)
+
+      if (!response.ok) {
+        throw new Error(data?.error || "Failed to send message")
+      }
+      if (data?.error) {
+        throw new Error(data.error)
+      }
+
+      form.reset()
+      setIsSubmitted(true)
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Something went wrong"
+      setError(message)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -40,16 +64,40 @@ export default function ContactForm() {
             <p className="text-muted-foreground">
               Your message has been sent successfully. Our team will contact you shortly.
             </p>
+
+            <Button
+              type="button"
+              variant="outline"
+              className="mt-6 border-border text-foreground hover:bg-foreground hover:text-background bg-transparent"
+              onClick={() => setIsSubmitted(false)}
+            >
+              Send another message
+            </Button>
           </CardContent>
         </Card>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
+          {error ? (
+            <Alert variant="destructive">
+              <AlertTitle>Message not sent</AlertTitle>
+              <AlertDescription>
+                <p>{error}</p>
+              </AlertDescription>
+            </Alert>
+          ) : null}
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
                 Full Name
               </label>
-              <Input id="name" name="name" placeholder="Your name" required className="bg-input border-border" />
+              <Input
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+                className="bg-input border-border"
+                disabled={isSubmitting}
+              />
             </div>
             <div>
               <label htmlFor="phone" className="block text-sm font-medium mb-2 text-foreground">
@@ -62,6 +110,7 @@ export default function ContactForm() {
                 placeholder="Your phone number"
                 required
                 className="bg-input border-border"
+                disabled={isSubmitting}
               />
             </div>
           </div>
@@ -76,6 +125,7 @@ export default function ContactForm() {
               placeholder="your@email.com"
               required
               className="bg-input border-border"
+              disabled={isSubmitting}
             />
           </div>
           <div>
@@ -87,6 +137,7 @@ export default function ContactForm() {
               name="project"
               placeholder="Which project are you interested in?"
               className="bg-input border-border"
+              disabled={isSubmitting}
             />
           </div>
           <div>
@@ -100,6 +151,7 @@ export default function ContactForm() {
               rows={4}
               required
               className="bg-input border-border"
+              disabled={isSubmitting}
             />
           </div>
           <Button
