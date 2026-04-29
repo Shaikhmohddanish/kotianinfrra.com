@@ -9,6 +9,7 @@ import StatsCounter from "@/components/stats-counter"
 import ProjectCard from "@/components/project-card"
 import ConnectivitySection, { type ConnectivityItem } from "@/components/connectivity-section"
 import TestimonialsCarousel from "@/components/testimonials-carousel"
+import VideoShowcase from "@/components/video-showcase"
 import { completedProjects, ongoingProjects } from "@/lib/projects"
 import { homeTestimonials } from "@/lib/testimonials"
 
@@ -216,6 +217,9 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Video Showcase */}
+      <VideoShowcase />
 
       {/* Featured Projects */}
       <section className="py-16 md:py-24 bg-card border-y border-border">
